@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:otp_pin_field/otp_pin_field.dart';
 
 import 'Login.dart';
 
@@ -42,28 +43,29 @@ class _OtpScreenState extends State<OtpScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextField(
-                  autofocus: true,
-                  style: TextStyle(color: Colors.red),
-                  decoration: InputDecoration(
-                      disabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      hintText: 'Enter OTP',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                ),
+                // TextField(
+                //   autofocus: true,
+                //   style: TextStyle(color: Colors.red),
+                //   decoration: InputDecoration(
+                //       disabledBorder: OutlineInputBorder(
+                //           borderRadius: BorderRadius.circular(20),
+                //           borderSide: BorderSide(
+                //               color: Colors.black,
+                //               style: BorderStyle.solid,
+                //               strokeAlign: Checkbox.width)),
+                //       focusedBorder: OutlineInputBorder(
+                //           borderRadius: BorderRadius.circular(20),
+                //           borderSide: BorderSide(
+                //               color: Colors.black, style: BorderStyle.solid)),
+                //       enabledBorder: OutlineInputBorder(
+                //           borderRadius: BorderRadius.circular(20),
+                //           borderSide: BorderSide(
+                //               color: Colors.black, style: BorderStyle.solid)),
+                //       hintText: 'Enter OTP',
+                //       hintStyle: GoogleFonts.poppins(
+                //           color: Colors.black, fontWeight: FontWeight.bold)),
+                // ),
+                OtpPinField(otpPinFieldDecoration: OtpPinFieldDecoration.custom,onSubmit: (value){}, onChange: (value){}),
                 SizedBox(
                   height: 30,
                 ),
