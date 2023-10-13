@@ -65,7 +65,9 @@ class _OtpScreenState extends State<OtpScreen> {
                 //       hintStyle: GoogleFonts.poppins(
                 //           color: Colors.black, fontWeight: FontWeight.bold)),
                 // ),
-                OtpPinField(otpPinFieldDecoration: OtpPinFieldDecoration.custom,onSubmit: (value){}, onChange: (value){}),
+                OtpPinField(otpPinFieldDecoration: OtpPinFieldDecoration.custom,onSubmit: (value){}, onChange: (value){},),
+               // Color(Colors.white),
+
                 SizedBox(
                   height: 30,
                 ),
