@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:system/Home.dart';
-import 'package:system/account_balance_wallet.dart';
+import 'package:system/Datail.dart';
 import 'package:system/add.dart';
 import 'package:system/supervisor_account.dart';
 
@@ -49,8 +49,8 @@ class _BottomNavBarCustomState extends State<BottomNavBarCustom> {
       },items: [
         BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.blue,), label: 'home'),
         BottomNavigationBarItem(icon: Icon(Icons.add,color: Colors.blue,),label: 'add'),
-        BottomNavigationBarItem(icon: Icon(Icons.account_balance_wallet,color: Colors.blue,),label: 'Account'),
-        BottomNavigationBarItem(icon: Icon(Icons.supervisor_account,color: Colors.blue,),label: 'Supervisor'),
+        BottomNavigationBarItem(icon: Icon(Icons.account_box_rounded,color: Colors.blue,),label: 'Profil'),
+        BottomNavigationBarItem(icon: Icon(Icons.supervisor_account,color: Colors.blue,),label: 'Account'),
       ]),
     );
 

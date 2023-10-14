@@ -99,7 +99,7 @@ class _OtpScreenState extends State<OtpScreen> {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                opacity: 1, image: AssetImage("assets/sharma.PNG"))),
+                opacity: 1, image: AssetImage("assets/sharma.png"))),
       ),
 
     );
