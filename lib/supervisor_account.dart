@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:system/BottomNavBarCustom.dart';
+//import 'package:system/BottomNavBarCustom.dart';
 import 'package:system/Login.dart';
 
 class supervisor_account extends StatefulWidget {

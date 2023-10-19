@@ -60,216 +60,221 @@ class _SignupState extends State<Signup> {
                   opacity: 1,
                   image: AssetImage("assets/logo.png"),
                 )),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextFormField(
-                  controller: firstNameController,
-                  decoration: InputDecoration(
-                      counterText: "",
-                      errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      disabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              width: 3,
-                              color: Colors.black,
-                              style: BorderStyle.solid)),
-                      hintText: 'Enter your first name',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                  validator: (value) {
-                    if (value != null && value.isNotEmpty) {
-                      return null;
-                    }
-                    return 'Mandatory';
-                  },
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  controller: lastNameController,
-                  decoration: InputDecoration(
-                      counterText: "",
-                      errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      disabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              width: 3,
-                              color: Colors.black,
-                              style: BorderStyle.solid)),
-                      hintText: 'Enter your last name',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                  validator: (value) {
-                    if (value != null && value.isNotEmpty) {
-                      return null;
-                    }
-                    return 'Mandatory';
-                  },
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  maxLength: 10,
-                  controller: mobileNameController ,
-                  decoration: InputDecoration(
-                      counterText: "",
-                      errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      disabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              width: 3,
-                              color: Colors.black,
-                              style: BorderStyle.solid)),
-                      hintText: 'Enter your mobile number',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                  validator: (value) {
-                    if (value != null && value.isNotEmpty) {
-                      return null;
-                    }
-                    return 'Mandatory';
-                  },
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  controller: emailNameController,
-                  decoration: InputDecoration(
-                      counterText: "",
-                      errorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      disabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black,
-                              style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              width: 3,
-                              color: Colors.black,
-                              style: BorderStyle.solid)),
-                      hintText: 'Enter your email',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                  validator: (value) {
-                    if (value != null && value.isNotEmpty) {
-                      return null;
-                    }
-                    return 'Mandatory';
-                  },
-                ),
-                SizedBox(height: 50,),
-                InkWell(
-                  onTap: (){
-                    if (formKey.currentState!.validate())
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text('${firstNameController.text + lastNameController.text} Signup successfully')));
-                    if (formKey.currentState!.validate())
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login(),));
-                    //debugPrint('${firstNameController.text}');
-                  },
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.indigo,
-                        border: Border.all(color: Colors.indigo, width: 3),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 370),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextFormField(
+                      controller: firstNameController,
+                      decoration: InputDecoration(
+                          counterText: "",
+                          errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedErrorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          disabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black, style: BorderStyle.solid)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid)),
+                          hintText: 'Enter your first name',
+                          hintStyle: GoogleFonts.poppins(
+                              color: Colors.black, fontWeight: FontWeight.bold)),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) {
+                          return null;
+                        }
+                        return 'Mandatory';
+                      },
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TextFormField(
+                      controller: lastNameController,
+                      decoration: InputDecoration(
+                          counterText: "",
+                          errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedErrorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          disabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black, style: BorderStyle.solid)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid)),
+                          hintText: 'Enter your last name',
+                          hintStyle: GoogleFonts.poppins(
+                              color: Colors.black, fontWeight: FontWeight.bold)),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) {
+                          return null;
+                        }
+                        return 'Mandatory';
+                      },
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TextFormField(
+                      maxLength: 10,
+                      controller: mobileNameController ,
+                      decoration: InputDecoration(
+                          counterText: "",
+                          errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedErrorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          disabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black, style: BorderStyle.solid)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid)),
+                          hintText: 'Enter your mobile number',
+                          hintStyle: GoogleFonts.poppins(
+                              color: Colors.black, fontWeight: FontWeight.bold)),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) {
+                          return null;
+                        }
+                        return 'Mandatory';
+                      },
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    TextFormField(
+                      controller: emailNameController,
+                      decoration: InputDecoration(
+                          counterText: "",
+                          errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedErrorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          disabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  strokeAlign: Checkbox.width)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  color: Colors.black, style: BorderStyle.solid)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20),
+                              borderSide: BorderSide(
+                                  width: 3,
+                                  color: Colors.black,
+                                  style: BorderStyle.solid)),
+                          hintText: 'Enter your email',
+                          hintStyle: GoogleFonts.poppins(
+                              color: Colors.black, fontWeight: FontWeight.bold)),
+                      validator: (value) {
+                        if (value != null && value.isNotEmpty) {
+                          return null;
+                        }
+                        return 'Mandatory';
+                      },
+                    ),
+                    SizedBox(height: 50,),
+                    InkWell(
+                      onTap: (){
+                        if (formKey.currentState!.validate())
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text('${firstNameController.text + lastNameController.text} Signup successfully')));
+                        if (formKey.currentState!.validate())
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login(),));
+                        //debugPrint('${firstNameController.text}');
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 50,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Colors.indigo,
+                            border: Border.all(color: Colors.indigo, width: 3),
+                            borderRadius: BorderRadius.all(Radius.circular(20))),
 
-                    child: Text('Signup',style: GoogleFonts.poppins(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                        child: Text('Signup',style: GoogleFonts.poppins(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
 
 
-                  ),
+                      ),
 
 
-                )
+                    )
 
-              ],
+                  ],
 
+                ),
+              ),
             ),
           ),
 
