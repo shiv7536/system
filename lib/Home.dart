@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(right: 10, left: 10,bottom: 40),
+            padding: const EdgeInsets.only(right: 10, left: 10, bottom: 40),
             child: Column(
               children: [
                 Container(
@@ -186,15 +186,16 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-
                       padding: const EdgeInsets.only(left: 10),
                       child: Container(
                         alignment: Alignment.center,
                         height: 60,
                         width: 150,
-                        decoration: BoxDecoration(color: Colors.indigo,
+                        decoration: BoxDecoration(
+                            color: Colors.indigo,
                             border: Border.all(color: Colors.indigo, width: 2),
-                            borderRadius: BorderRadius.all(Radius.circular(20))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
                         child: Text('Download PDF',
                             style: GoogleFonts.poppins(
                                 color: Colors.white,
@@ -203,15 +204,16 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     Padding(
-
                       padding: const EdgeInsets.only(left: 10),
                       child: Container(
                         alignment: Alignment.center,
                         height: 60,
                         width: 150,
-                        decoration: BoxDecoration(color: Colors.indigo,
+                        decoration: BoxDecoration(
+                            color: Colors.indigo,
                             border: Border.all(color: Colors.indigo, width: 2),
-                            borderRadius: BorderRadius.all(Radius.circular(20))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(20))),
                         child: Text('Visit Website',
                             style: GoogleFonts.poppins(
                                 color: Colors.white,

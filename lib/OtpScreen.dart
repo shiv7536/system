@@ -65,14 +65,21 @@ class _OtpScreenState extends State<OtpScreen> {
                 //       hintStyle: GoogleFonts.poppins(
                 //           color: Colors.black, fontWeight: FontWeight.bold)),
                 // ),
-                OtpPinField(otpPinFieldDecoration: OtpPinFieldDecoration.custom,onSubmit: (value){}, onChange: (value){},),
-               // Color(Colors.white),
+                OtpPinField(
+                  otpPinFieldDecoration: OtpPinFieldDecoration.custom,
+                  onSubmit: (value) {},
+                  onChange: (value) {},
+                ),
+                // Color(Colors.white),
 
                 SizedBox(
                   height: 30,
                 ),
                 InkWell(
                   onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text('Password Changed successfully!')));
+
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => Login()));
                   },
@@ -84,13 +91,17 @@ class _OtpScreenState extends State<OtpScreen> {
                       color: Colors.indigo,
                       borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Text('Submit',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold)),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.indigo)),
+                      child: Text('Submit',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -99,10 +110,8 @@ class _OtpScreenState extends State<OtpScreen> {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                opacity: 1, image: AssetImage("assets/sharma.png"))),
+                opacity: 1, image: AssetImage("assets/logo.png"))),
       ),
-
     );
-
   }
 }

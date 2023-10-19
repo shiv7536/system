@@ -21,7 +21,7 @@ class Datail extends State<account_balance_wallet> {
             backgroundColor: Colors.white,
             centerTitle: true,
             title: Text(
-              'Profil',
+              'Details',
               style: GoogleFonts.poppins(
                   color: Colors.deepPurple, fontWeight: FontWeight.bold),
             )),
@@ -30,7 +30,7 @@ class Datail extends State<account_balance_wallet> {
             child: Column(children: [
               Padding(
                 padding: const EdgeInsets.only(top: 40),
-                child: Image(image: AssetImage('assets/image.png')),
+                child: Image(image: AssetImage('assets/detail.png')),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
@@ -52,7 +52,7 @@ class Datail extends State<account_balance_wallet> {
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
                 child: TextField(
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                       disabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -61,7 +61,7 @@ class Datail extends State<account_balance_wallet> {
                       errorBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
+                          borderSide: BorderSide(color: Colors.black,width: 3)),
                       hintText: 'Merchant Name : ',
                       hintStyle: GoogleFonts.poppins(color: Colors.black45)),
                 ),
@@ -82,8 +82,8 @@ class Datail extends State<account_balance_wallet> {
                       errorBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
-                      hintText: 'Merchant Mobile No.',
+                          borderSide: BorderSide(color: Colors.black,width: 3)),
+                      hintText: 'Merchant Mobile No. :',
                       hintStyle: GoogleFonts.poppins(color: Colors.black45)),
                 ),
               ),
@@ -104,8 +104,8 @@ class Datail extends State<account_balance_wallet> {
                       errorBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
-                      hintText: 'Firm ',
+                          borderSide: BorderSide(color: Colors.black,width: 3)),
+                      hintText: 'Firm :',
                       hintStyle: GoogleFonts.poppins(color: Colors.black45)),
                 ),
               ),
@@ -123,10 +123,10 @@ class Datail extends State<account_balance_wallet> {
                       focusedBorder: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       errorBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
+                          borderSide: BorderSide(color: Colors.black,)),
                       enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
-                      hintText: 'Address',
+                          borderSide: BorderSide(color: Colors.black,width: 3)),
+                      hintText: 'Address :',
                       hintStyle: GoogleFonts.poppins(color: Colors.black45)),
                 ),
               ),

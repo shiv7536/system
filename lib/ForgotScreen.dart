@@ -11,6 +11,9 @@ class ForgotScreen extends StatefulWidget {
 }
 
 class _ForgotScreenState extends State<ForgotScreen> {
+  final formKey = GlobalKey<FormState>();
+
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -38,55 +41,87 @@ class _ForgotScreenState extends State<ForgotScreen> {
 
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, bottom: 50),
+
           child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                TextField(
-                  style: TextStyle(color: Colors.red),
-                  decoration: InputDecoration(
-                      disabledBorder: OutlineInputBorder(
+            child: Form(
+              key: formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+
+                children: [
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+
+                    validator: (value) {
+
+                      if(value !=null &&  value.isNotEmpty){
+                        return null;
+                      };
+                      return 'This field cant be emply';
+                    },
+                    maxLength: 10,
+
+                    style: TextStyle(color: Colors.red),
+
+                    decoration: InputDecoration(
+                      counterText: "",
+                      errorBorder:OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide(
                               color: Colors.black,
                               style: BorderStyle.solid,
-                              strokeAlign: Checkbox.width)),
-                      focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                              color: Colors.black, style: BorderStyle.solid)),
-                      hintText: 'Enter Mobile Number',
-                      hintStyle: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
-                ),
-                SizedBox(height: 30,),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => OtpScreen()));
-                  },
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    width: 500,
-                    decoration: BoxDecoration(
-                      color: Colors.indigo,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Text('Send OTP',
-                        style: GoogleFonts.poppins(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold)),
+                              strokeAlign: Checkbox.width)) ,
+                        focusedErrorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(
+                                color: Colors.black,
+                                style: BorderStyle.solid,
+                                strokeAlign: Checkbox.width)),
+                        disabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(
+                                color: Colors.black,
+                                style: BorderStyle.solid,
+                                strokeAlign: Checkbox.width)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(
+                                color: Colors.black, style: BorderStyle.solid)),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(width: 3,
+                                color: Colors.black, style: BorderStyle.solid)),
+                        hintText: 'Enter Mobile Number',
+                        hintStyle: GoogleFonts.poppins(
+                            color: Colors.black, fontWeight: FontWeight.bold)),
                   ),
-                )
+                  SizedBox(height: 30,),
+                  InkWell(
+                    onTap: (){
+                      if(formKey.currentState!.validate()) {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => OtpScreen()));
+                      }
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      width: 500,
+                      decoration: BoxDecoration(
+                        color: Colors.indigo,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text('Send OTP',
+                          style: GoogleFonts.poppins(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
+                    ),
+                  )
 
-              ],
+                ],
 
+              ),
             ),
           ),
         ),
@@ -94,7 +129,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                opacity: 1, image: AssetImage("assets/shiv.jpg"))),
+                opacity: 1, image: AssetImage("assets/logo.png"))),
       ),
 
     );
