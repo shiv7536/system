@@ -29,8 +29,11 @@ class _LoginState extends State<Login> {
         ),
       ),
       body: SingleChildScrollView(
+
         child: Container(
+
           child: Center(
+
             child: Padding(
               padding: const EdgeInsets.only(top: 500, left: 20, right: 20),
               child: Form(

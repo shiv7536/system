@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:system/City.dart';
+import 'package:system/City1.dart';
 import 'package:system/NewsDetail.dart';
+
+import 'VideoPlayerScreen.dart';
 
 class HomeNewsScreen extends StatefulWidget {
   const HomeNewsScreen({super.key});
@@ -78,54 +82,86 @@ class _HomeNewsScreenState extends State<HomeNewsScreen> {
                           Container(
                             child: Column(
                               children: [
-                                Text('Fatehpur Sikri',
+                               InkWell(onTap: (){
+
+
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                               },child:  Text('Fatehpur Sikri',
+                                   style: GoogleFonts.palanquin(
+                                     fontSize: 24,
+                                     fontWeight: FontWeight.w500,
+                                     letterSpacing: 5,
+                                   )),),
+                               InkWell(onTap: (){
+
+
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                               },child:  Text('Gurugram',
+                                   style: GoogleFonts.palanquin(
+                                     fontSize: 24,
+                                     fontWeight: FontWeight.w500,
+                                     letterSpacing: 5,
+                                   )),),
+                               InkWell(onTap: (){
+
+
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                               },child:  Text('Mathura',
+                                   style: GoogleFonts.palanquin(
+                                     fontSize: 24,
+                                     fontWeight: FontWeight.w500,
+                                     letterSpacing: 5,
+                                   )),),
+                                InkWell(onTap: (){
+
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                                },child:  Text('Jaipur ',
                                     style: GoogleFonts.palanquin(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 5,
-                                    )),
-                                Text('Gurugram',
+                                    )),),
+                                InkWell(onTap: (){
+
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                                },child:  Text('Noida',
                                     style: GoogleFonts.palanquin(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 5,
-                                    )),
-                                Text('Mathura',
+                                    )),),
+                                InkWell(onTap: (){
+
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => City(),));
+                                },child:  Text('Alwar',
                                     style: GoogleFonts.palanquin(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 5,
-                                    )),
-                                Text('Jaipur',
+                                    )),),
+                                InkWell(onTap: (){
+
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => VideoPlayerScreen(),));
+                                },child:  Text('Ajmer',
                                     style: GoogleFonts.palanquin(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 5,
-                                    )),
-                                Text('Noida',
+                                    )),),
+                                InkWell(onTap: (){
+
+
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => City1(),));
+                                },child:  Text('Agra',
                                     style: GoogleFonts.palanquin(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w500,
                                       letterSpacing: 5,
-                                    )),
-                                Text('Alwar',
-                                    style: GoogleFonts.palanquin(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 5,
-                                    )),
-                                Text('Ajmer',
-                                    style: GoogleFonts.palanquin(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 5,
-                                    )),
-                                Text('Agra',
-                                    style: GoogleFonts.palanquin(
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 5,
-                                    )),
+                                    )),),
                               ],
                             ),
                           )

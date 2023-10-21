@@ -28,17 +28,17 @@ class _FirstScreenState extends State<FirstScreen> {
       body: Container(
         child: Center(
           child: (Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Welcome!!',
+                'News!!',
                 style: GoogleFonts.adamina(
-                    fontSize: 30, fontWeight: FontWeight.bold,color: Colors.black),),
+                    fontSize: 30, fontWeight: FontWeight.bold,color: Colors.black,letterSpacing: 5),),
               Text(
-                'To visit',
+                'Paper',
                 style: GoogleFonts.adamina(
-                    fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black),)
+                    fontSize: 20, fontWeight: FontWeight.bold,color: Colors.red,letterSpacing: 5),)
 
 
             ],
@@ -50,7 +50,7 @@ class _FirstScreenState extends State<FirstScreen> {
             image: DecorationImage(
                 opacity: 1,
                 fit: BoxFit.cover,
-                image: AssetImage('assets/splash.png'))),
+                image: AssetImage('assets/Group 49.png'))),
       ),
     );
   }
